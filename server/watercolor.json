@@ -1,0 +1,76 @@
+[
+    {
+    "id": 1,
+    "name": "Hydrangea",
+    "style": "loose",
+    "tutorialTime": 49,
+    "youtube-link": "https://www.youtube.com/watch?v=AZL5ehg1UJs",
+    "img": "../src/assets/hydrangea.jpg" ,
+    "colors": ["violet", "azure blue", "fuchsia", "emerald green"]
+},
+{
+    "id": 2,
+    "name": "Galaxy Wolf",
+    "style": "loose",
+    "tutorialTime": 43,
+    "youtube-link": "https://www.youtube.com/watch?v=_DqHGcd-OtU",
+    "img": "../src/assets/galaxy wolf.jpg" ,
+    "colors": ["black", "space blue", "rose red", "white"]
+},
+{
+    "id": 3,
+    "name": "Nebula",
+    "style": "loose",
+    "tutorialTime": 57,
+    "youtube-link": "https://www.youtube.com/watch?v=tdArPeN_qac",
+    "img": "../src/assets/nebula",
+    "colors": ["black", "space blue", "rose red", "white", "tangerine"]
+},
+{
+    "id": 4,
+    "name": "Rooster" ,
+    "style": "loose",
+    "tutorialTime": 66,
+    "youtube-link": "https://www.youtube.com/watch?v=iM4zOvVzWLI",
+    "img": "../src/assets/rooster.jpg",
+    "colors": ["navy", "red", "daisy"]
+},
+{
+    "id": 5,
+    "name": "Fall Pumpkin",
+    "style": "detailed",
+    "tutorialTime": 47,
+    "youtube-link": "https://www.youtube.com/watch?v=OGfIhq-3-Jc",
+    "img": "../src/assets/Fall Pumpkin.jpg",
+    "colors": ["black", "space blue", "rose red", "white", "tangerine"]
+},
+{
+    "id": 6,
+    "name": "Pomegranate" ,
+    "style": "detailed",
+    "tutorialTime": 70,
+    "youtube-link": "https://www.youtube.com/watch?v=zshyzvp4W5M",
+    "img": "../src/assets/pomegranat.jpg",
+    "colors": ["red", "daisy", "lime", "blueberry"]
+},
+{
+    "id": 7,
+    "name": "Moody Silos",
+    "style": "loose",
+    "tutorialTime": 59,
+    "youtube-link": "https://www.youtube.com/watch?v=MROSd3XEKMk",
+    "img": "../src/assets/Moody Silos.jpg",
+    "colors": ["navy", "lime", "daisy", "gray"]
+},
+{
+    "id": 8,
+    "name": "Fall Wreath",
+    "style": "detailed",
+    "tutorialTime": 48,
+    "youtube-link": "https://www.youtube.com/watch?v=3rfVmZuuvfI",
+    "img": "../src/assets/Fall Wreath.jpg",
+    "colors": ["navy", "daisy", "gray", "red"]
+
+}
+
+]

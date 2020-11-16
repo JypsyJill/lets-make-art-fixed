@@ -1,25 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from "react";
+import Header from "./components/Header";
+import Gallery from "./components/Gallery";
+import AvailKits from "./components/AvailKits";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import axios from "axios";
+
+class App extends Component {
+  constructor () {
+    super();
+
+    this.state = {
+      kits: [],
+    }
+  }
+
+  componentDidMount() {
+    axios.get("/api/watercolor")
+      .then(res => this.setState({ kits: res.data }))
+      .catch(err => console.log(err))
+  }
+
+  addToProj = id => {
+    axios.post(`/api/watercolor/${id}`)
+      .then(res => this.setState({ kits: res.data }))
+      .catch(err => console.log(err))
+  }
+
+  deleteProj = (index) => {
+    axios.delete(`/api/watercolor/${index}`)
+      .then(res => this.setState({ kits: res.data }))
+      .catch(err => console.log(err));
+  };
+
+  editProj = (index, datePainted) => {
+    axios.put(`/api/team/${index}`, { datePainted })
+      .then(res => this.setState({ kits: res.data }))
+      .catch(err => console.log(err))
+  };
+
+  render() {
+    console.log(this.state.kits)
+    return (
+      <div>
+        <Header />
+        <main className="main-box">
+          <AvailKits
+          kits={this.state.kits}
+          deleteProj={this.deleteProj}
+          datePainted={this.datePainted}
+          />
+          <Gallery addToProj={this.addToProj} />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
