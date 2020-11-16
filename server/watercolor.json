@@ -1,3 +1,6 @@
+ hydrangea from "../src/assets/hydrangea.jpg"
+
+
 [
     {
     "id": 1,
@@ -14,7 +17,7 @@
     "style": "loose",
     "tutorialTime": 43,
     "youtube-link": "https://www.youtube.com/watch?v=_DqHGcd-OtU",
-    "img": "../src/assets/galaxy wolf.jpg" ,
+    "img": "../src/assets/galaxyWolf.jpg" ,
     "colors": ["black", "space blue", "rose red", "white"]
 },
 {
@@ -41,7 +44,7 @@
     "style": "detailed",
     "tutorialTime": 47,
     "youtube-link": "https://www.youtube.com/watch?v=OGfIhq-3-Jc",
-    "img": "../src/assets/Fall Pumpkin.jpg",
+    "img": "../src/assets/fallPumpkin.jpg",
     "colors": ["black", "space blue", "rose red", "white", "tangerine"]
 },
 {
@@ -59,7 +62,7 @@
     "style": "loose",
     "tutorialTime": 59,
     "youtube-link": "https://www.youtube.com/watch?v=MROSd3XEKMk",
-    "img": "../src/assets/Moody Silos.jpg",
+    "img": "../src/assets/moodySilos.jpg",
     "colors": ["navy", "lime", "daisy", "gray"]
 },
 {
@@ -68,7 +71,7 @@
     "style": "detailed",
     "tutorialTime": 48,
     "youtube-link": "https://www.youtube.com/watch?v=3rfVmZuuvfI",
-    "img": "../src/assets/Fall Wreath.jpg",
+    "img": "../src/assets/fallWreath.jpg",
     "colors": ["navy", "daisy", "gray", "red"]
 
 }
