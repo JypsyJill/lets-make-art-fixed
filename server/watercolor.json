@@ -1,80 +1,76 @@
- 
-
-
 [
     {
-    "id": 1,
-    "name": "Hydrangea",
-    "style": "loose",
-    "tutorialTime": 49,
-    "youTubeLink": "https://www.youtube.com/watch?v=AZL5ehg1UJs",
-    "img": "https://cdn.shopify.com/s/files/1/2398/2457/products/hydrangea_styled_1800x1800.jpg?v=1569227929" ,
-    "colors": ["violet", "azure blue", "fuchsia", "emerald green"]
-    
+
+"id": 1,
+"name": "Hydrangea",
+"style": "loose",
+"tutorialTime": 49,
+"youTubeLink": "https://www.youtube.com/watch?v=AZL5ehg1UJs",
+"img": "https://cdn.shopify.com/s/files/1/2398/2457/products/hydrangea_styled_1800x1800.jpg?v=1569227929" ,
+"colors": ["violet", "azure blue", "fuchsia", "emerald green"]
 },
 {
-    "id": 2,
-    "name": "Galaxy Wolf",
-    "style": "loose",
-    "tutorialTime": 43,
-    "youTubeLink": "https://www.youtube.com/watch?v=_DqHGcd-OtU",
-    "img": "https://cdn.shopify.com/s/files/1/2398/2457/products/Styled-GalaxyWolf-1200x_1800x1800.jpg?v=1570807491" ,
-    "colors": ["black", "space blue", "rose red", "white"]
+"id": 2,
+"name": "Galaxy Wolf",
+"style": "loose",
+"tutorialTime": 43,
+"youTubeLink": "https://www.youtube.com/watch?v=_DqHGcd-OtU",
+"img": "https://cdn.shopify.com/s/files/1/2398/2457/products/Styled-GalaxyWolf-1200x_1800x1800.jpg?v=1570807491" ,
+"colors": ["black", "space blue", "rose red", "white"]
 },
 {
-    "id": 3,
-    "name": "Nebula",
-    "style": "loose",
-    "tutorialTime": 57,
-    "youTubeLink": "https://www.youtube.com/watch?v=tdArPeN_qac",
-    "img": "https://cdn.shopify.com/s/files/1/2398/2457/products/Styled-Nebula-1200x_1800x1800.jpg?v=1570807132",
-    "colors": ["black", "space blue", "rose red", "white", "tangerine"]
+"id": 3,
+"name": "Nebula",
+"style": "loose",
+"tutorialTime": 57,
+"youTubeLink": "https://www.youtube.com/watch?v=tdArPeN_qac",
+"img": "https://cdn.shopify.com/s/files/1/2398/2457/products/Styled-Nebula-1200x_1800x1800.jpg?v=1570807132",
+"colors": ["black", "space blue", "rose red", "white", "tangerine"]
 },
 {
-    "id": 4,
-    "name": "Rooster" ,
-    "style": "loose",
-    "tutorialTime": 66,
-    "youTubeLink": "https://www.youtube.com/watch?v=iM4zOvVzWLI",
-    "img": "https://cdn.shopify.com/s/files/1/2398/2457/products/w1200_4c7c_Styled_Rooster-1200x_1800x1800.jpg?v=1569252208",
-    "colors": ["navy", "red", "daisy"]
+"id": 4,
+"name": "Rooster" ,
+"style": "loose",
+"tutorialTime": 66,
+"youTubeLink": "https://www.youtube.com/watch?v=iM4zOvVzWLI",
+"img": "https://cdn.shopify.com/s/files/1/2398/2457/products/w1200_4c7c_Styled_Rooster-1200x_1800x1800.jpg?v=1569252208",
+"colors": ["navy", "red", "daisy"]
 },
 {
-    "id": 5,
-    "name": "Fall Pumpkin",
-    "style": "detailed",
-    "tutorialTime": 47,
-    "youTubeLink": "https://www.youtube.com/watch?v=OGfIhq-3-Jc",
-    "img": "https://cdn.shopify.com/s/files/1/2398/2457/products/Styled-FallPumpkin-1200x_1800x1800.jpg?v=1570806971",
-    "colors": ["black", "space blue", "rose red", "white", "tangerine"]
+"id": 5,
+"name": "Fall Pumpkin",
+"style": "detailed",
+"tutorialTime": 47,
+"youTubeLink": "https://www.youtube.com/watch?v=OGfIhq-3-Jc",
+"img": "https://cdn.shopify.com/s/files/1/2398/2457/products/Styled-FallPumpkin-1200x_1800x1800.jpg?v=1570806971",
+"colors": ["black", "space blue", "rose red", "white", "tangerine"]
 },
 {
-    "id": 6,
-    "name": "Pomegranate" ,
-    "style": "detailed",
-    "tutorialTime": 70,
-    "youTubeLink": "https://www.youtube.com/watch?v=zshyzvp4W5M",
-    "img": "https://cdn.shopify.com/s/files/1/2398/2457/products/w1200_6a95_Styled_Pomegranate-1200x_1800x1800.jpg?v=1569252207",
-    "colors": ["red", "daisy", "lime", "blueberry"]
+"id": 6,
+"name": "Pomegranate" ,
+"style": "detailed",
+"tutorialTime": 70,
+"youTubeLink": "https://www.youtube.com/watch?v=zshyzvp4W5M",
+"img": "https://cdn.shopify.com/s/files/1/2398/2457/products/w1200_6a95_Styled_Pomegranate-1200x_1800x1800.jpg?v=1569252207",
+"colors": ["red", "daisy", "lime", "blueberry"]
 },
 {
-    "id": 7,
-    "name": "Moody Silos",
-    "style": "loose",
-    "tutorialTime": 59,
-    "youTubeLink": "https://www.youtube.com/watch?v=MROSd3XEKMk",
-    "img": "https://cdn.shopify.com/s/files/1/2398/2457/products/w1200_4e09_Styled_MoodySilos-1200x_1800x1800.jpg?v=1569252206",
-    "colors": ["navy", "lime", "daisy", "gray"]
+"id": 7,
+"name": "Moody Silos",
+"style": "loose",
+"tutorialTime": 59,
+"youTubeLink": "https://www.youtube.com/watch?v=MROSd3XEKMk",
+"img": "https://cdn.shopify.com/s/files/1/2398/2457/products/w1200_4e09_Styled_MoodySilos-1200x_1800x1800.jpg?v=1569252206",
+"colors": ["navy", "lime", "daisy", "gray"]
 },
 {
-    "id": 8,
-    "name": "Fall Wreath",
-    "style": "detailed",
-    "tutorialTime": 48,
-    "youTubeLink": "https://www.youtube.com/watch?v=3rfVmZuuvfI",
-    "img": "https://cdn.shopify.com/s/files/1/2398/2457/products/w1200_2922_Styled_FallWreath-1200x_1800x1800.jpg?v=1569252206",
-    "colors": ["navy", "daisy", "gray", "red"]
+"id": 8,
+"name": "Fall Wreath",
+"style": "detailed",
+"tutorialTime": 48,
+"youTubeLink": "https://www.youtube.com/watch?v=3rfVmZuuvfI",
+"img": "https://cdn.shopify.com/s/files/1/2398/2457/products/w1200_2922_Styled_FallWreath-1200x_1800x1800.jpg?v=1569252206",
+"colors": ["navy", "daisy", "gray", "red"]
 
 }
-
 ]

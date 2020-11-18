@@ -3,10 +3,10 @@ import FinishedProj from "./FinishedProj";
 
 
 const AvailKits = (props) => {
-    const kitsArray = props.kits.map((watercolor, index) => (
+    const kitsArray = props.finishedKits.map((watercolor, index) => (
         <FinishedProj 
         key={`${watercolor.id}-${index}`}
-        // watercolor={watercolor}
+        watercolor={watercolor}
         deleteProj={props.deleteProj}
         editProj={props.editProj}
         index={index}

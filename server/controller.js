@@ -1,48 +1,48 @@
-const gallery = require("./watercolor.json");
-let kits = [];
+const kits = require("./watercolor.json");
+let completedProjects = []
 
 module.exports = {
-    displayAll: (req, res) => {
-        const { search } = req.query;
-        const resKits = [];
-        console.log(gallery)
-        if (search) {
-            const myKits = gallery.filter(
-                (watercolor) =>
-                watercolor.tutorialTime()>(search())
-            );
-            for (let i = 0; i < 8; i++) {
-                if (myKits[i] !== null) {
-                    resKits.push(myKits[i]);
-                }
-            }
-        } else {
-            for (let i = 0; i < 8; i++) {
-                resKits.push(gallery[i]);
-            }
-        }
-        return res.status(200).send(resKits);
+    getAll: (req, res) => {
+        console.log(kits)
+        res.status(200).send({kits: kits, completedProjects: completedProjects})
     },
-    // getProjects: (req, res) => {
-    //     res.status(200).send(kits);
-    // },
-    addToProj: (req, res) => {
-        const { id } = req.params;
-        const heresOne = gallery.find((watercolor) => watercolor.id === +id);
+     // displayAll: (req, res) => {
+    //     const { search } = req.query;
+    //     const resKits = [];
+    //     if (search) {
+    //         const myKits = gallery.filter(
+    //             (watercolor) =>
+    //             watercolor.tutorialTime()>(search())
+    //         );
+    //         for (let i = 0; i < 8; i++) {
+    //             if (myKits[i] !== null) {
+    //                 resKits.push(myKits[i]);
+    //             }
+    //         }
+    //     } else {
+    //         for (let i = 0; i < 8; i++) {
+    //             resKits.push(gallery[i]);
+    //         }
+    //     }
+    //     return res.status(200).send(resKits);
+   // },
+   addToProj: (req, res) => {
+    const { id } = req.params;
+    const { date } = req.body
+    const projectFound = kits.find(project => project.id === +id)
+    const projectIndex = kits.findIndex(project => project.id === +id)
 
-        heresOne.datePainted = "";
+    projectFound.datePainted = date;
+    completedProjects.push(projectFound);
 
-        kits.push(heresOne);
-
-        res.status(200).send(kits);
-    },
-    editProj: (req, res) => {
-        const { index } = req.params;
-        const { datePainted } = req.body;
-
-        kits[index].datePainted = datePainted;
-        
-        res.status(200).send(kits);
-    },    
-
+    kits.splice(projectIndex, 1)
+    res.status(200).send({kits: kits, completedProjects: completedProjects});
+},
+editProj: (req, res) => {
+    const { index } = req.params;
+    const { datePainted } = req.body;
+    kits[index].datePainted = datePainted;
+    
+    res.status(200).send(kits);
+},    
 };
