@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import Gallery from "./components/Gallery";
 import AvailKits from "./components/AvailKits";
-
 import axios from "axios";
 
 class App extends Component {
@@ -12,7 +11,7 @@ class App extends Component {
 
     this.state = {
       kits: [],
-      finishedKits:[]
+      finishedKits: []
     }
   }
 
@@ -31,30 +30,29 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
-  deleteProj = index => {
-    axios.delete(`/api/watercolor/${index}`)
+  deleteProj = id => {
+    axios.delete(`/api/watercolor/${id}`)
       .then(res => this.setState({ kits: res.data }))
       .catch(err => console.log(err));
   };
 
-  editProj = (index, datePainted) => {
-    axios.put(`/api/team/${index}`, { datePainted })
-      .then(res => this.setState({ kits: res.data }))
+  editProj = (id, datePainted, img) => {
+    axios.put(`/api/watercolor/${id}`, { datePainted, img })
+      .then(res => this.setState({ finishedKits: res.data }))
       .catch(err => console.log(err))
   };
 
   render() {
-    
     return (
       <div>
         <Header />
-        <main className="main-box"> 
-        <Gallery kits={this.state.kits} addToProj={this.addToProj} />
+        <main className="main-box">
+          <Gallery kits={this.state.kits} addToProj={this.addToProj} />
           <AvailKits
           finishedKits={this.state.finishedKits}
           deleteProj={this.deleteProj}
-          datePainted={this.datePainted}
-           />
+          editProj={this.editProj}
+          />
         </main>
       </div>
     );
