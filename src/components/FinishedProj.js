@@ -23,11 +23,11 @@ class FinishedProj extends Component {
         const { dateUpdate, imgUpdate, toggleEdit } = this.state
         const { datePainted, img, name, id } = this.props.watercolor
         const { handleChange, toggleEditFn } = this
-        const { updateProj } = this.props
+        const { editProj } = this.props
 
         return (
             <li>
-                <h1>{`${name} Hey, mom! Look what I did!`}</h1>
+                <h1>{`${name} I'm done with this one!`}</h1>
 
                 {toggleEdit ? 
                     (
@@ -35,7 +35,7 @@ class FinishedProj extends Component {
                             <input name="dateUpdate" value={dateUpdate} onChange={handleChange} />
                             <input name="imgUpdate" value={imgUpdate} onChange={handleChange} />
                             <div>
-                                <button onClick={() => { updateProj(id, dateUpdate, imgUpdate); toggleEditFn() }}>Save</button>
+                                <button onClick={() => { editProj(id, dateUpdate, imgUpdate); toggleEditFn() }}>Save</button>
                                 <button>Cancel</button>
                             </div>
                         </div>
