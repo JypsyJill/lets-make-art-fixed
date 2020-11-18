@@ -48,7 +48,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <main className="main-box">
+        <main className="main-box"> 
         <Gallery kits={this.state.kits} addToProj={this.addToProj} />
           <AvailKits
           finishedKits={this.state.finishedKits}

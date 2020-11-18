@@ -2,73 +2,51 @@ import React, { Component } from "react";
 
 class FinishedProj extends Component {
     constructor (props) {
-        super(props);
+        super(props)
 
         this.state = {
-            datePainted: props.watercolor.date,
+            dateUpdate: props.watercolor.datePainted,
+            imgUpdate: props.watercolor.img,
             toggleEdit: false,
         };
     }
 
-    handleChange = (event) => {
-        this.setState({ datePainted: event.target.value });
+    handleChange = e => {
+        this.setState({ [e.target.name]: e.target.value });
     };
 
-    toggleEdit = () => {
+    toggleEditFn = () => {
         this.setState({ toggleEdit: !this.state.toggleEdit });
     };
 
     render() {
-        const { watercolor } = this.props;
+        const { dateUpdate, imgUpdate, toggleEdit } = this.state
+        const { datePainted, img, name, id } = this.props.watercolor
+        const { handleChange, toggleEditFn } = this
+        const { updateProj } = this.props
+
         return (
             <li>
-                <h1>
-                    { watercolor.name}{" "}
-                    <span
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            this.props.deleteProj(this.props.index);
-                        }}
-                    >
-                        {` I'm done with this one! `}
-                    </span>    
-                </h1>
+                <h1>{`${name} Hey, mom! Look what I did!`}</h1>
 
-                {this.state.toggleEdit ? (
-                    <input
-                    value={this.state.datePainted}
-                    onChange={this.handleChange}
-                    />
-                ) : (
-                    <h2> Date Painted: {watercolor.datePainted}</h2>
-                )}
-
-                {this.state.toggleEdit ? (
-                    <div>
-                        <button
-                            onClick={() => {
-                                this.props.editProj(
-                                    this.props.index,
-                                    this.state.datePainted
-                                );
-                                this.toggleEdit();
-                            }}
-                        >
-                            Save
-                        </button>
-                        <button
-                            onClick={() => {
-                                this.setState({ datePainted: watercolor.date });
-                                this.toggleEdit();
-                            }}
-                        >
-                            Cancel
-                        </button>
-                    </div>
-                ) : null}
-
-                <button onClick={this.toggleEdit}>Edit</button>
-                <h2>{watercolor.img}</h2>
+                {toggleEdit ? 
+                    (
+                        <div>
+                            <input name="dateUpdate" value={dateUpdate} onChange={handleChange} />
+                            <input name="imgUpdate" value={imgUpdate} onChange={handleChange} />
+                            <div>
+                                <button onClick={() => { updateProj(id, dateUpdate, imgUpdate); toggleEditFn() }}>Save</button>
+                                <button>Cancel</button>
+                            </div>
+                        </div>
+                    ) : (
+                        <div>
+                            <h2>{`Date Painted: ${datePainted}`}</h2>
+                            <img src={img} alt={name}/>
+                            <button onClick={toggleEditFn}>Edit</button>
+                        </div>
+                    )
+                } 
             </li>
         );
     }

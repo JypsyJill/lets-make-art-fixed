@@ -6,7 +6,7 @@ module.exports = {
         console.log(kits)
         res.status(200).send({kits: kits, completedProjects: completedProjects})
     },
-     // displayAll: (req, res) => {
+    // displayAll: (req, res) => {
     //     const { search } = req.query;
     //     const resKits = [];
     //     if (search) {
@@ -25,24 +25,28 @@ module.exports = {
     //         }
     //     }
     //     return res.status(200).send(resKits);
-   // },
-   addToProj: (req, res) => {
-    const { id } = req.params;
-    const { date } = req.body
-    const projectFound = kits.find(project => project.id === +id)
-    const projectIndex = kits.findIndex(project => project.id === +id)
+    // },
+    addToProj: (req, res) => {
+        const { id } = req.params;
+        const { date } = req.body
+        const projectFound = kits.find(project => project.id === +id)
+        const projectIndex = kits.findIndex(project => project.id === +id)
 
-    projectFound.datePainted = date;
-    completedProjects.push(projectFound);
+        projectFound.datePainted = date;
+        completedProjects.push(projectFound);
 
-    kits.splice(projectIndex, 1)
-    res.status(200).send({kits: kits, completedProjects: completedProjects});
-},
-editProj: (req, res) => {
-    const { index } = req.params;
-    const { datePainted } = req.body;
-    kits[index].datePainted = datePainted;
-    
-    res.status(200).send(kits);
-},    
+        kits.splice(projectIndex, 1)
+        res.status(200).send({kits: kits, completedProjects: completedProjects});
+    },
+    editProj: (req, res) => {
+        const { id } = req.params
+        const { datePainted, img } = req.body
+        const projectIndex = completedProjects.findIndex(project => project.id === +id)
+        
+        completedProjects[projectIndex].datePainted = datePainted
+        completedProjects[projectIndex].img = img
+        
+        res.status(200).send(completedProjects);
+    },    
+
 };

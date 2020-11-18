@@ -5,11 +5,10 @@ import FinishedProj from "./FinishedProj";
 const AvailKits = (props) => {
     const kitsArray = props.finishedKits.map((watercolor, index) => (
         <FinishedProj 
-        key={`${watercolor.id}-${index}`}
-        watercolor={watercolor}
-        deleteProj={props.deleteProj}
-        editProj={props.editProj}
-        index={index}
+            key={`${watercolor.id}-${index}`}
+            watercolor={watercolor}
+            deleteProj={props.deleteProj}
+            editProj={props.editProj}
         />
     ));
     return <ul> {kitsArray} </ul>;
