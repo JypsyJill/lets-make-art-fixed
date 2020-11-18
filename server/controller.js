@@ -11,13 +11,13 @@ module.exports = {
                 (watercolor) =>
                 watercolor.tutorialTime()>(search())
             );
-            for (let i = 0; i < 7; i++) {
+            for (let i = 0; i < 8; i++) {
                 if (myKits[i] !== null) {
                     resKits.push(myKits[i]);
                 }
             }
         } else {
-            for (let i = 0; i < 7; i++) {
+            for (let i = 0; i < 8; i++) {
                 resKits.push(gallery[i]);
             }
         }

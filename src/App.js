@@ -5,6 +5,7 @@ import Gallery from "./components/Gallery";
 import AvailKits from "./components/AvailKits";
 
 import axios from "axios";
+import FinishedProj from './components/FinishedProj';
 
 class App extends Component {
   constructor () {
@@ -45,12 +46,12 @@ class App extends Component {
       <div>
         <Header />
         <main className="main-box">
-          <AvailKits
+          <Gallery addToProj={this.addToProj} />
+          {/* <AvailKits
           kits={this.state.kits}
           deleteProj={this.deleteProj}
           datePainted={this.datePainted}
-          />
-          <Gallery addToProj={this.addToProj} />
+          /> */}
         </main>
       </div>
     );
